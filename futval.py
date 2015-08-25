@@ -6,6 +6,7 @@ def main():
     print("This program will calculate the future value of an investment")
 
     principal = input("Enter the initial investment: ")
+    annual = input ("Enter annual contribution: ")
     apr = input ("Enter the annual rate: ")
     years = input("Enter the number of years: ")
 
@@ -14,7 +15,7 @@ def main():
 
     balance = principal
     for i in range(years):
-        balance = balance * (1 + apr)
+        balance = balance * (1 + apr) + annual
 
     print ("The value in " +str(years) + " years will be $" + "{:0.2f}".format(balance))
 
