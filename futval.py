@@ -7,14 +7,15 @@ def main():
 
     principal = input("Enter the initial investment: ")
     apr = input ("Enter the annual rate: ")
+    years = input("Enter the number of years: ")
 
     if (apr > 1.0):
         apr = apr / 100.0
 
     balance = principal
-    for i in range(10):
+    for i in range(years):
         balance = balance * (1 + apr)
 
-    print ("The value in 10 years will be $" + str(balance))
+    print ("The value in " +str(years) + " years will be $" + "{:0.2f}".format(balance))
 
 main()
